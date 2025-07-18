@@ -1,0 +1,5 @@
+baseURL = 'https://myfirstsite.org/'
+languageCode = 'en-us'
+title = 'My Site'
+theme = 'ananke'
+ 
