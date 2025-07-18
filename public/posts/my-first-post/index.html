@@ -9,38 +9,52 @@
         <link rel="stylesheet" href="/styles.css" />
         <title> My Site </title>
     </head>
-    <body>
-        <nav>
-    <div>
-        <a href="/"> My Site </a>
-    </div>
 
-    <div>
-        <a href="/"> Home </a>
-        <a href="/posts"> Posts </a>
+    <body>
+        <nav class="navbar is-dark">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/"> My Site </a>
+        </div>
+
+        <div class="navbar-start">
+            <a class="navbar-item" href="/"> Home </a>
+            <a class="navbar-item" href="/posts"> Posts </a>
+        </div>
     </div>
 </nav>
  
-<section>
-    <h1>My first post</h1>
-    <div>
-        <article><p>Hello world!</p>
+<section class="section">
+    <main class="container mb-6">
+        <h1 class="title">My first post</h1>
+        <h3 class="subtitle">
+            <span class="tag is-link">1 Minutes</span>
+            <span class="tag is-dark">Aug 1, 2020</span>
+            <span class="tag is-warning">9 Words</span>
+        </h3>
+
+        <article class="content"><p>Hello world!</p>
 <p>This is my first post using Hugo</p>
 </article>
+    </main>
+
+    <div class="container content">
+        <ul>
+            
+            <li>
+                Previous Post:
+                <a class="previous" href="http://localhost:1313/posts/my_third_post/">My third post</a>
+            </li>
+             
+            <li>
+                Next Post:
+                <a class="next" href="http://localhost:1313/posts/my_second_post/">My second post</a>
+            </li>
+            
+        </ul>
     </div>
 </section>
-<aside>
-    <div>
-        <section>
-            <h4>Sat Aug 1, 2020</h4>
-            <h5>9 Words</h5>
-        </section>
-    </div>
-    <div>
-         
-    </div>
-</aside>
- <footer>
+ <footer class="footer has-text-centered">
     <p>
         Copyright &copy; 2025 My Site | All rights
         reserved.
