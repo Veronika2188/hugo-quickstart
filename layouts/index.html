@@ -3,8 +3,6 @@
     <!-- <header>
         <h1>{{ .Title }}</h1>
     </header> -->
-    <div>
-        {{ range first 5 .Site.RegularPages }} {{ .Render "summary" }} {{ end }}
-    </div>
+    <div>{{ range .Site.RegularPages }} {{ .Render "summary" }} {{ end }}</div>
 </main>
 {{ end }}
