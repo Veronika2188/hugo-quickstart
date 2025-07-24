@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+        />
+        <link rel="stylesheet" href="/styles.css" />
+        <title> Korolab Documentation </title>
+    </head>
+
+    <body>
+        <nav class="navbar is-dark">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/"> Korolab Documentation </a>
+        </div>
+
+        <div class="navbar-start">
+            
+        </div>
+    </div>
+</nav>
+ 
+<section class="section">
+    <main class="container mb-6">
+        <h1 class="title">Конфигуратор обьекта</h1>
+        <h3 class="subtitle">
+            
+            <span class="tag is-warning">325 Words</span>
+        </h3>
+
+        <article class="content"><h1 id="конфигуратор-обьекта">Конфигуратор обьекта</h1>
+<h3 id="конфигурация-объекта">Конфигурация обЪекта</h3>
+<p>Структура объекта (територии, этажей, поммещений, электрощитов)</p>
+<p>Состав оборудования (датчков, исполнителей и т. п.)</p>
+<p>Размещения оборудования на объекте (связи)</p>
+<h3 id="пример">Пример</h3>
+<p>Кухня</p>
+<table>
+  <thead>
+      <tr>
+          <th>Оборудование</th>
+          <th>set</th>
+          <th>state</th>
+          <th>log</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>кондиционер(5)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>форсунка увлажннения(23)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>заслонка воздушная (1)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Люста(1)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Трэковый светильник(4)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Радиатор(14)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>LED лента(21)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Впольный ковектор(2)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Д/протечки(5)</td>
+          <td>нет комманд</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Смарт(12)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Д/температуры пола(15)</td>
+          <td>нет комманд</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="работа-с-оборудованием">Работа с оборудованием</h3>
+<p>Все оборудование описысается через шаблоны хранящиеся в справочнике оборудования.</p>
+<p>У каждого шаблона есть набор полей описывающих связи оборудование с физическим уровнем -* *<strong>*модулями автоматики или драйверами***</strong>.</p>
+<p><em>При связывании каналов оборудования с модулям автоматики появляется возможность отправлять команды и получать статусы с оборудования.</em></p>
+<p>Каждое изменение должно логироваться.</p>
+<h4 id="пример-1">Пример 1</h4>
+<p>Рулонная штора</p>
+<table>
+  <thead>
+      <tr>
+          <th>команда</th>
+          <th>связь</th>
+          <th>set</th>
+          <th>state</th>
+          <th>log</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>открыть</td>
+          <td>ссылка на канал модуля автоматики или канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>закрыть</td>
+          <td>ссылка на канал модуля автоматики или канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>стоп</td>
+          <td>ссылка на канал модуля автоматики или канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>положение</td>
+          <td>ссылка на канал модуля автоматики или канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="пример-2">Пример 2</h3>
+<p>Трэковый светильник</p>
+<table>
+  <thead>
+      <tr>
+          <th>команда</th>
+          <th>связь</th>
+          <th>set</th>
+          <th>state</th>
+          <th>log</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>вкл/выкл</td>
+          <td>ссылка на канал модуля (реле и диммер 220)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>яркость</td>
+          <td>ссылка на канал модуля (диммер 220)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="пример-3">Пример 3</h3>
+<p>Кондиционер</p>
+<table>
+  <thead>
+      <tr>
+          <th>команда</th>
+          <th>связь</th>
+          <th>set</th>
+          <th>state</th>
+          <th>log</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>вкл/выкл</td>
+          <td>ссылка на канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>уставка</td>
+          <td>ссылка на канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>температура с кондиционера</td>
+          <td>ссылка на канал драйвера</td>
+          <td>нет команд - только статус</td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>скорость вентилятор</td>
+          <td>ссылка на канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>положение ламелей</td>
+          <td>ссылка на канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>режим работы</td>
+          <td>ссылка на канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>тихий режим</td>
+          <td>ссылка на канал драйвера</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="зоны-инженерных-систем">Зоны инженерных систем</h3>
+<p>Зона делается для каждой инженерной системы и описывает все оборудование необходимое для ее функционирования (датчики, исполнители источники тепла,холода и т.п.)</p>
+<p>Варианты зон: зона отопления, зона освещения, зона защиты от протечек и т.п.</p>
+<p><em>К зонам инженерных систем применяются стандарные или кастомные алгоритмы и сценарии</em></p>
+<h3 id="пример-1-1">Пример 1</h3>
+<p>Зона протечки</p>
+<table>
+  <thead>
+      <tr>
+          <th>Оборудование</th>
+          <th>set</th>
+          <th>state</th>
+          <th>log</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>кухня.д/протечки(1)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>с/у.д/протечки(2)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>ванная.д/протечки(3)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>с/у.шаровый привод (1)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>с/у.шаровый привод (2)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>котельная.Насос (1)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>котельная.Насос (2)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="пример-2-1">Пример 2</h3>
+<p>Зона отопления</p>
+<table>
+  <thead>
+      <tr>
+          <th>Оборудование</th>
+          <th>set</th>
+          <th>state</th>
+          <th>log</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>коридор.коллектор(1).серво(1)</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>гостиная.радатор(1).вентилятор</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>гостиная.смарт(2).датчик температуры</td>
+          <td></td>
+          <td></td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table>
+</article>
+    </main>
+
+    <div class="container content">
+        <ul>
+            
+            <li>
+                Previous Post:
+                <a class="previous" href="http://localhost:1313/posts/%D1%81%D0%BB%D0%BE%D0%B8/">Слои проекта</a>
+            </li>
+             
+            <li>
+                Next Post:
+                <a class="next" href="http://localhost:1313/posts/%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D1%8B/">Контейнеры</a>
+            </li>
+            
+        </ul>
+    </div>
+</section>
+ <footer class="footer has-text-centered">
+    <p>
+        Copyright &copy; 2025 Korolab Documentation | All rights
+        reserved.
+    </p>
+</footer>
+
+    </body>
+</html>
